@@ -7,3 +7,5 @@ public interface stack2 <E>{
     E top();
     E pop();
 }
+
+
