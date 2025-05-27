@@ -19,6 +19,9 @@ public class PenelusuranDLL {
         System.out.println();
     }
     public static void main(String[] args) {
+        System.out.println("Aufan Taufiqurrahman");
+        System.out.println("2411532011");
+        
         NodeDLL head = new NodeDLL(1);
         NodeDLL second = new NodeDLL(2);
         NodeDLL third = new NodeDLL(3);

@@ -25,7 +25,7 @@ public class InsertDLL {
         return head;
     }
 
-    public static NodeDLL insertAtPotition (NodeDLL head, int pos, int new_data) {
+    public static NodeDLL insertAtPosition (NodeDLL head, int pos, int new_data) {
         NodeDLL new_node = new NodeDLL(new_data);
         if (pos == 1) {
             new_node.next = head;
@@ -41,8 +41,17 @@ public class InsertDLL {
         }
         if (curr == null) {
             System.out.println("Posisi tidak ada");
+            return head;
         }
-        return head;
+
+        new_node.prev = curr;
+	    new_node.next = curr.next;
+	    curr.next = new_node;
+        
+	    if(new_node.next != null) {
+		    new_node.next.prev = new_node;
+	    }
+	    return head;
     }
     public static void printList (NodeDLL head) {
         NodeDLL curr = head;
@@ -53,6 +62,9 @@ public class InsertDLL {
         System.out.println();
     }
     public static void main(String[] args) {
+        System.out.println("Aufan Taufiqurrahman");
+        System.out.println("2411532011");
+
         NodeDLL head = new NodeDLL(2);
         head.next = new NodeDLL(3);
         head.next.prev = head;
@@ -76,10 +88,7 @@ public class InsertDLL {
         System.out.print("tambah node 4 di posisi 4: ");
         int data2 = 4;
         int pos = 4;
-        head = insertAtPotition(head, pos, data2);
+        head = insertAtPosition(head, pos, data2);
         printList(head);
-
-        System.out.println("Aufan Taufiqurrahman");
-        System.out.println("2411532011");
     }
 }
