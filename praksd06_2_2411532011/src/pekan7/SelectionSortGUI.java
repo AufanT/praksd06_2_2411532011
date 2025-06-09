@@ -85,7 +85,8 @@ public class SelectionSortGUI extends JFrame {
 		}
 
 		i = 0;
-		stepCount = 0;
+		j = j + 1;
+		stepCount = 1;
 		sorting = true;
 		stepButton.setEnabled(true);
 		stepArea.setText("");
