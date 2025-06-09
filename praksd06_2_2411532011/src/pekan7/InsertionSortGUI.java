@@ -5,6 +5,8 @@ import javax.swing.*;
 
 public class InsertionSortGUI extends JFrame {
 
+	// Aufan_Taufiqurrahman
+    // 2411532011
 	private static final long serialVersionUID = 1L;
 	private int[] array;
 	private JLabel[] labelArray;
@@ -79,7 +81,8 @@ public class InsertionSortGUI extends JFrame {
 				array[k] = Integer.parseInt(parts[k].trim());
 			}
 		} catch (NumberFormatException e) {
-			JOptionPane.showMessageDialog(this, "Masukkan hanya angka yang dipisahkan dengan koma!", "error", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(this, "Masukkan hanya angka yang dipisahkan dengan koma!", 
+			"error", JOptionPane.ERROR_MESSAGE);
 			return;
 		}
 
