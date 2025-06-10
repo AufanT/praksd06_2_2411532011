@@ -31,7 +31,7 @@ public class SelectionSortGUI extends JFrame {
 	}
 
 	public SelectionSortGUI() {
-		setTitle("Insertion Sort Langkah per langkah");
+		setTitle("Selection Sort Langkah per langkah");
 		setSize(750, 400);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setLocationRelativeTo(null);
