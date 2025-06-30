@@ -14,7 +14,7 @@ public class DaftarBelanja {
     public void tambahItem(String nama, int kuantitas, String kategori) {
         itemBelanja item = new itemBelanja(nama, kuantitas, kategori);
         Node newNode = new Node(item);
-        
+
         if (head == null) {
             head = newNode;
             tail = newNode;
@@ -57,13 +57,13 @@ public class DaftarBelanja {
         
         System.out.println("Item tidak ditemukan.");
     }
-    
+
     public void tampilkanSemuaItem() {
         if (head == null) {
             System.out.println("Daftar belanja kosong.");
             return;
         }
-        
+
         System.out.println("--- Daftar Belanja ---");
         Node current = head;
         while (current != null) {
@@ -71,7 +71,7 @@ public class DaftarBelanja {
             current = current.next;
         }
     }
-    
+
     public void tampilkanPerKategori(String kategori) {
         System.out.println("--- Item dalam kategori '" + kategori + "' ---");
         Node current = head;
@@ -79,12 +79,13 @@ public class DaftarBelanja {
         
         while (current != null) {
             if (current.item.getKategori().equalsIgnoreCase(kategori)) {
-                System.out.println("- " + current.item.getNama() + " (" + current.item.getKuantitas() + ")");
+                System.out.println("- " + current.item.getNama() + 
+                " (" + current.item.getKuantitas() + ")");
                 found = true;
             }
             current = current.next;
         }
-        
+
         if (!found) {
             System.out.println("Tidak ada item dalam kategori '" + kategori + "'.");
         }

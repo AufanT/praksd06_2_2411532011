@@ -64,7 +64,6 @@ public class InsertionSortGUI extends JFrame {
 		add(controlPanel, BorderLayout.SOUTH);
 		add(scrollPane, BorderLayout.EAST);
 
-		// Event listeners yang benar
 		setButton.addActionListener(e -> setArrayFromtext());
 		stepButton.addActionListener(e -> performStep());
 		resetButton.addActionListener(e -> reset());
